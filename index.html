@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="accordion">
+        <h1 id="accord-head">Le Meilleur de la thérapie lumière rouge<span>.</span></h1>
+        <div class="accordion-wrapper">
+            <div class="accordion-parent">
+            <input type="radio" name="accordion" id="first" checked="checked" value="/image/lumi.jfif">
+            <label for="first" class="accordion-label">Red + Infrared wavelength Techology</label>
+                <div class="accordion-container">
+                    <div class="accordion-content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud. Curabitur ac tellus suscipit, vulputate mi sed, iaculis lacus.</p>
+                    </div>
+                </div>
+                <input type="radio" name="accordion" id="second"
+                value="/image/lumi-2.avif">
+            <label for="second" class="accordion-label">300 High technology LEDs</label>
+                <div class="accordion-container">
+                    <div class="accordion-content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud. Curabitur ac tellus suscipit, vulputate mi sed, iaculis lacus.</p>
+                    </div>
+                </div>
+                <input type="radio" name="accordion" id="third" value="/image/lumi-3.avif">
+            <label for="third" class="accordion-label">Digital Control Screen</label>
+                <div class="accordion-container">
+                    <div class="accordion-content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud. Curabitur ac tellus suscipit, vulputate mi sed, iaculis lacus.</p>
+                    </div>
+                </div>
+                <input type="radio" name="accordion" id="fourth" value="/image/lumi-4.avif">
+            <label for="fourth" class="accordion-label">Stand & Wall Fixation</label>
+                <div class="accordion-container">
+                    <div class="accordion-content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud. Curabitur ac tellus suscipit, vulputate mi sed, iaculis lacus.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-image">
+                <img src="image/lumi.jfif"   alt="">
+                <img src="image/lumi-2.avif" alt="" id="image-2">
+                <img src="image/lumi-3.avif" alt="" id="image-3">
+                <img src="image/lumi-4.avif" alt="" id="image-4">
+            </div>
+    </div>
+</body>
+<style>
+    @font-face{
+        font-family: manrope;
+        src: url(Manrope-VariableFont_wght.ttf)
+    }
+    .accordion{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .accordion-wrapper{
+        display: flex;
+        width: 1140px;
+        height: 391px;
+        gap: 24px;
+    }
+    .accordion-parent{
+        border-top: 1px solid #FF0000;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        padding: 24px;
+        transition: 0.3s ease-in-out;
+    }
+    .accordion-content {
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease, opacity 0.5s ease;
+        padding-bottom: 12px;
+    }
+    .accordion-container{
+        display: flex;
+        border-bottom: 1px solid #EFEFEF;
+    }
+    input[type="radio"]:checked + label + .accordion-container .accordion-content {
+        max-height: 200px; 
+        opacity: 1;
+    }
+    input:checked + .accordion-label{
+        color: #FF0000;
+    }
+    input{
+        display: none;
+    }
+    #image-2, #image-3, #image-4{
+        display: none;
+    }
+    .accordion h1{
+        font-family: manrope;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 56px;
+    }
+    .accordion span{
+        color: #FF0000;
+    }
+    .accordion-label{
+        display: flex;
+        font-family: manrope;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 32px;
+        gap: 16px;
+    }
+    .accordion-image img{
+        border-radius: 24px;
+        object-fit: cover;
+        width: 496px;
+        height: 439px;
+    } 
+    .accordion-content p{
+        color: #4C4C4C;
+        font-family: manrope;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+        margin: 0px;
+    }
+    #accord-head{
+        width: 1140px;
+    }
+    @media (max-width: 767px){
+        .accordion{
+            flex-wrap: wrap;
+            flex-direction: initial;
+        }
+        .accordion-wrapper{
+            width: 100%;
+            height: 100%;
+            flex-direction: column-reverse;
+            padding: 16px;
+        }
+        .accordion h1{
+            font-size: 28px;
+            line-height: 33px;
+            padding: 0px 0px 0px 16px;
+        }
+        .accordion-label{
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 26px;
+        }
+        .accordion-image img{
+            width: 100% !important;
+            height: 300px !important;
+        }
+        .accordion-parent{
+            padding: 16px 0px 16px 0px;
+            gap: 12px;
+        }
+    }
+    @media (max-width: 1024px){
+        .accordion{
+            align-items: initial;
+        }
+        #accord-head{
+            width: initial;
+        }
+        .accordion-wrapper{
+            width: initial;
+        }
+        .accordion-image img{
+            width: 300px;
+            height: 300px;
+            object-position: left;
+        }
+        .accordion-image{
+            display: flex;
+            align-items: center;
+        }
+    }
+</style>
+<script>
+    const imageContainer = document.querySelector('.accordion-image');
+    const image = imageContainer.querySelector('img');
+    const radioButtons = document.querySelectorAll('.accordion-parent input[type="radio"]');
+    radioButtons.forEach(radioButton => {
+    radioButton.addEventListener('change', () => {
+    image.src = radioButton.value;
+  });
+});
+</script>
+</html>
